@@ -1,0 +1,88 @@
+/* Main Colors */
+
+:root {
+    --text: #0e1014;
+    --background: #f8f9fb;
+    --primary: #0f67ff;
+    --secondary: #c5dafc;
+    --accent: #86f492;
+}
+
+/* Variations */
+
+:root {
+    --text-50: #f0f1f5;
+    --text-100: #e1e4ea;
+    --text-200: #c3c9d5;
+    --text-300: #a5aec0;
+    --text-400: #8793ab;
+    --text-500: #697896;
+    --text-600: #546078;
+    --text-700: #3f485a;
+    --text-800: #2a303c;
+    --text-900: #15181e;
+    --text-950: #0a0c0f;
+
+    --background-50: #eff1f6;
+    --background-100: #dfe3ec;
+    --background-200: #bec7da;
+    --background-300: #9eacc7;
+    --background-400: #7d90b5;
+    --background-500: #5d74a2;
+    --background-600: #4a5d82;
+    --background-700: #384661;
+    --background-800: #252e41;
+    --background-900: #131720;
+    --background-950: #090c10;
+
+    --primary-50: #e5efff;
+    --primary-100: #ccdfff;
+    --primary-200: #99beff;
+    --primary-300: #669eff;
+    --primary-400: #337eff;
+    --primary-500: #005eff;
+    --primary-600: #004bcc;
+    --primary-700: #003899;
+    --primary-800: #002566;
+    --primary-900: #001333;
+    --primary-950: #00091a;
+
+    --secondary-50: #e7f0fe;
+    --secondary-100: #cfe0fc;
+    --secondary-200: #9ec1fa;
+    --secondary-300: #6ea2f7;
+    --secondary-400: #3d84f5;
+    --secondary-500: #0d65f2;
+    --secondary-600: #0a51c2;
+    --secondary-700: #083c91;
+    --secondary-800: #052861;
+    --secondary-900: #031430;
+    --secondary-950: #010a18;
+
+    --accent-50: #e8fdea;
+    --accent-100: #d0fbd5;
+    --accent-200: #a2f6ac;
+    --accent-300: #73f282;
+    --accent-400: #44ee58;
+    --accent-500: #16e92e;
+    --accent-600: #11bb25;
+    --accent-700: #0d8c1c;
+    --accent-800: #095d13;
+    --accent-900: #042f09;
+    --accent-950: #021705;
+}
+
+/* Gradients */
+
+:root {
+    --linearPrimarySecondary: linear-gradient(#0f67ff, #C5DAFC);
+    --linearPrimaryAccent: linear-gradient(#0f67ff, #86F492);
+    --linearSecondaryAccent: linear-gradient(#C5DAFC, #86F492);
+    --radialPrimarySecondary: radial-gradient(#0f67ff, #C5DAFC);
+    --radialPrimaryAccent: radial-gradient(#0f67ff, #86F492);
+    --radialSecondaryAccent: radial-gradient(#C5DAFC, #86F492);
+}
+
+
+/* Theme is available and configurable at :
+https://www.realtimecolors.com/?colors=0e1014-f8f9fb-0f67ff-C5DAFC-86F492&fonts=Inter-Inter */
