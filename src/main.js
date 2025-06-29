@@ -4,6 +4,8 @@ import router from "./router";
 
 createApp(App).use(router).mount("#app");
 
-// Assets
+// CSS Assets
 import "./assets/theme.css";
 import "./assets/reset.css";
+import "./assets/animations.css";
+import "./assets/fonts.css";

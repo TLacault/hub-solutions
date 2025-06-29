@@ -12,14 +12,15 @@ body {
   align-items: center;
 }
 
-/* html {
-  overflow: -moz-scrollbars-none;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-} */
+html {
+  /* overflow: -moz-scrollbars-none; */
+  /* -ms-overflow-style: none; */
+  /* scrollbar-width: none; */
+  scroll-behavior: smooth;
+}
 
 body {
-  background: var(--background-radial);
+    background-color: var(--background);
 }
 
 * {
@@ -31,6 +32,7 @@ body {
   transition: all 0.3s ease-in-out;
   font-family: "Inter", sans-serif;
   font-weight: 500;
+  color: var(--text);
 
   ::before,
   ::after {

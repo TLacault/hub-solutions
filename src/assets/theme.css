@@ -1,11 +1,23 @@
 /* Main Colors */
 
 :root {
-    --text: #0e1014;
-    --background: #f8f9fb;
-    --primary: #0f67ff;
-    --secondary: #c5dafc;
-    --accent: #86f492;
+    --text: oklch(17.269% 0.00895 264.331);
+    --background: oklch(98.192% 0.00297 264.797);
+    --primary: oklch(56.668% 0.23862 261.354);
+    --secondary: oklch(88.371% 0.05237 260.067);
+    --shade: oklch(94.591% 0.003 264.785);
+
+    --danger: oklch(0.7 0.05 30);
+    --warning: oklch(0.7 0.05 100);
+    --success: oklch(0.7 0.05 160);
+    --info: oklch(0.7 0.05 260);
+
+    --logo_1:#467cbd;
+    --logo_2:#65ab37;
+    --logo_3:#f0b514;
+    --logo_4:#936021;
+    --logo_5:#c71f18;
+    --logo_6:#af18c7;
 }
 
 /* Variations */
