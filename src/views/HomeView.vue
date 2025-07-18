@@ -10,8 +10,8 @@ export default {
 </script>
 
 <template>
-  <div class="img fade-shape">
-    <img src="@/assets/img/home/shape_01.png" alt="Hero Image" />
+  <div class="bg-shape fade-shape">
+    <img src="@/assets/img/home/shape_02.png" alt="Hero Image" />
   </div>
 
   <div class="hero appear">
@@ -36,13 +36,28 @@ export default {
 </template>
 
 <style scoped>
-.img {
+.bg-shape {
   position: absolute;
-  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  justify-self: center;
+  /* top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
   z-index: -1;
+  /* width: auto; */
+  height: 100vh;
   animation-delay: 0.5s;
+  scale: 0.8;
+  /* outline: 1px solid red; */
+
+  & img {
+    width: 100%;
+    /* height: 100%; */
+    object-fit: fill;
+  }
 }
 
 .hero {
@@ -50,7 +65,7 @@ export default {
 
   h1 {
     font-family: "Arial Black", sans-serif;
-    font-size: 5rem;
+    font-size: clamp(2rem, 5vw, 5rem);
     font-weight: bold;
     color: var(--text);
     text-align: center;

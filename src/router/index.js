@@ -18,6 +18,11 @@ const routes = [
     component: () => import("../views/AuditsView.vue"),
   },
   {
+    path: "/iprp",
+    name: "iprp",
+    component: () => import("../views/IprpView.vue"),
+  },
+  {
     path: "/contact",
     name: "contact",
     component: () => import("../views/ContactView.vue"),

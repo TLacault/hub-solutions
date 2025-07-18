@@ -17,6 +17,7 @@ export default {
       <router-link to="/">Accueil</router-link>
       <router-link to="/formations">Formations</router-link>
       <router-link to="/audits">Audits</router-link>
+      <router-link to="/iprp">IPRP</router-link>
       <router-link to="/contact">Contact</router-link>
     </div>
   </nav>
@@ -30,16 +31,22 @@ nav {
   justify-content: space-between;
   position: fixed;
   top: 1rem;
-  width: 100%;
+  width: 95%;
   max-width: 1500px;
-  padding: 10px;
+  /* padding: 10px; */
   border-radius: 100px;
   /* background-color: rgba(200, 200, 200, 0.2); */
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.05); */
   /* outline: 1px solid var(--background); */
-  backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px); */
   animation-delay: 1.5s;
   z-index: 1000;
+}
+
+@media (max-width: 1000px) {
+  .logo span {
+    display: none;
+  }
 }
 
 .logo {
@@ -51,7 +58,7 @@ nav {
   border-radius: 100px;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
-  background-color: var(--shade);
+  /* background-color: var(--shade); */
 
   & img {
     width: 40px;
@@ -69,26 +76,24 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 0.2rem;
   border-radius: 100px;
   padding: 0.5rem;
-  background-color: var(--shade);
-  opacity: 0.8;
-  backdrop-filter: blur(20px);
-  /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); */
+  background-color: rgba(236, 237, 239, 0.8);
+  backdrop-filter: blur(10px);
 
   & a {
     text-align: center;
     text-decoration: none;
     color: var(--text);
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 600;
     padding: 0.7rem 1.4rem;
     border-radius: 100px;
 
     &:hover {
-      background-color: rgba(200, 200, 200, 0.5);
-      background-color: var(--secondary);
+      background-color: rgba(200, 200, 200, 0.4);
+      /* background-color: var(--secondary); */
       /* color: var(--primary); */
     }
 
@@ -101,6 +106,24 @@ nav {
       color: var(--primary);
       text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
+  }
+}
+
+@media (max-width: 800px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .links {
+    flex-direction: column;
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  .logo {
+    margin-bottom: 1rem;
   }
 }
 </style>
