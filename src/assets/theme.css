@@ -1,16 +1,17 @@
 /* Main Colors */
 
 :root {
-  --text: oklch(17.269% 0.00895 264.331);
-  --background: oklch(98.192% 0.00297 264.797);
-  --primary: oklch(56.668% 0.23862 261.354);
-  --secondary: oklch(88.371% 0.05237 260.067);
+  --text: rgb(14, 16, 20);
+  --background: rgb(248, 249, 251);
+  --primary: rgb(15, 103, 255);
+  --secondary: rgb(197, 218, 252);
   --shade: rgb(236, 237, 239);
+  --shade-hover: rgb(223, 224, 224);
 
-  --danger: oklch(0.7 0.05 30);
-  --warning: oklch(0.7 0.05 100);
-  --success: oklch(0.7 0.05 160);
-  --info: oklch(0.7 0.05 260);
+  --danger: rgb(188, 147, 140);
+  --warning: rgb(165, 160, 124);
+  --success: rgb(132, 168, 148);
+  --info: rgb(141, 159, 190);
 
   --logo_1: #467cbd;
   --logo_2: #65ab37;

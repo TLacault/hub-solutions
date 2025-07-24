@@ -33,19 +33,19 @@ nav {
   top: 1rem;
   width: 95%;
   max-width: 1500px;
-  /* padding: 10px; */
   border-radius: 100px;
-  /* background-color: rgba(200, 200, 200, 0.2); */
-  /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.05); */
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   /* outline: 1px solid var(--background); */
-  /* backdrop-filter: blur(10px); */
+  backdrop-filter: blur(10px);
   animation-delay: 1.5s;
   z-index: 1000;
 }
 
 @media (max-width: 1000px) {
   .logo span {
-    display: none;
+    /* display: none; */
   }
 }
 
@@ -68,7 +68,7 @@ nav {
   & span {
     font-family: "Arial Black", sans-serif;
     font-size: 1.5rem;
-    font-weight: bold;
+    /* font-weight: bold; */
   }
 }
 
@@ -79,7 +79,7 @@ nav {
   gap: 0.2rem;
   border-radius: 100px;
   padding: 0.5rem;
-  background-color: rgba(236, 237, 239, 0.8);
+  background-color: rgba(236, 237, 239, 1);
   backdrop-filter: blur(10px);
 
   & a {
@@ -113,17 +113,30 @@ nav {
   nav {
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 0rem;
+    border-radius: 20px;
   }
 
   .links {
     flex-direction: column;
     width: 100%;
     padding: 0.5rem;
+    border-radius: 15px;
+    background-color: rgba(236, 237, 239, 0.5);
+
+    & a {
+      /* text-align: start; */
+      width: 100%;
+      border-radius: 10px;
+    }
   }
 
   .logo {
     margin-bottom: 1rem;
+
+    & .span {
+      display: block !important;
+    }
   }
 }
 </style>
