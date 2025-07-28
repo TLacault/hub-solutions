@@ -20,7 +20,7 @@ html {
 }
 
 body {
-    background-color: var(--background);
+  background-color: var(--background);
 }
 
 * {
@@ -33,6 +33,9 @@ body {
   font-family: "Inter", sans-serif;
   font-weight: 500;
   color: var(--text);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
   ::before,
   ::after {

@@ -1,51 +1,109 @@
 <script>
 export default {
   name: "NavigationBar",
-  //   props: {
-  //     msg: String,
-  //   },
+  data() {
+    return {
+      isMobile: false,
+      isOpen: false,
+      lastScrollY: 0,
+      hideNav: false,
+    };
+  },
+  methods: {
+    checkWindowWidth() {
+      this.isMobile = window.innerWidth <= 850;
+      if (!this.isMobile) this.isOpen = false;
+    },
+    toggleMenu() {
+      this.isOpen = !this.isOpen;
+    },
+    handleScroll() {
+      const currentY = window.scrollY;
+
+      // Show / Hide behavior for desktop
+      if (!this.isMobile) {
+        if (currentY > this.lastScrollY && currentY > 100) {
+          this.hideNav = true;
+        } else {
+          this.hideNav = false;
+        }
+      }
+
+      this.lastScrollY = currentY;
+    },
+  },
+  mounted() {
+    this.checkWindowWidth();
+    window.addEventListener("resize", this.checkWindowWidth);
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  beforeUnmount() {
+    window.removeEventListener("resize", this.checkWindowWidth);
+    window.removeEventListener("scroll", this.handleScroll);
+  },
 };
 </script>
 
 <template>
-  <nav class="appear">
+  <nav class="appear" :class="{ hidden: hideNav && !isMobile }">
+    <!-- Logo -->
     <router-link to="/" class="logo">
       <img src="@/assets/img/logo.png" alt="Logo" />
       <span>Hub Solutions</span>
     </router-link>
-    <div class="links">
-      <router-link to="/">Accueil</router-link>
-      <router-link to="/formations">Formations</router-link>
-      <router-link to="/audits">Audits</router-link>
-      <router-link to="/iprp">IPRP</router-link>
-      <router-link to="/contact">Contact</router-link>
+
+    <!-- Burger Icon -->
+    <div
+      class="burger"
+      v-if="isMobile"
+      @click="toggleMenu"
+      :class="{ active: isOpen }"
+    >
+      <i class="ri-menu-5-line"></i>
     </div>
+
+    <!-- Navigation Links -->
+    <transition name="slide-fade">
+      <div
+        class="links"
+        v-if="!isMobile || isOpen"
+        :class="{ 'mobile-expanded': isMobile }"
+      >
+        <router-link to="/" @click="isOpen = false">Accueil</router-link>
+        <router-link to="/formations" @click="isOpen = false"
+          >Formations</router-link
+        >
+        <router-link to="/audits" @click="isOpen = false">Audits</router-link>
+        <router-link to="/iprp" @click="isOpen = false">IPRP</router-link>
+        <router-link to="/contact" @click="isOpen = false">Contact</router-link>
+      </div>
+    </transition>
   </nav>
 </template>
 
 <style scoped>
 nav {
+  /* outline: 1px solid red; */
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   position: fixed;
-  top: 1rem;
-  width: 95%;
-  max-width: 1500px;
-  border-radius: 100px;
-  padding: 10px;
+  top: 0rem;
+  width: 100%;
+  /* max-width: 1500px; */
+  /* border-radius: 100px; */
+  padding: 10px 1rem 10px;
   background-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  /* outline: 1px solid var(--background); */
+  /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); */
   backdrop-filter: blur(10px);
-  animation-delay: 1.5s;
+  -webkit-backdrop-filter: blur(10px);
   z-index: 1000;
-}
 
-@media (max-width: 1000px) {
-  .logo span {
-    /* display: none; */
+  &.hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
   }
 }
 
@@ -58,17 +116,21 @@ nav {
   border-radius: 100px;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
-  /* background-color: var(--shade); */
 
   & img {
     width: 40px;
-    aspect-ratio: 1 / 1;
+    /* aspect-ratio: 1 / 1; */
   }
 
   & span {
     font-family: "Arial Black", sans-serif;
-    font-size: 1.5rem;
-    /* font-weight: bold; */
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+  }
+}
+
+@media (max-width: 400px) {
+  .logo span {
+    display: none;
   }
 }
 
@@ -79,8 +141,9 @@ nav {
   gap: 0.2rem;
   border-radius: 100px;
   padding: 0.5rem;
-  background-color: rgba(236, 237, 239, 1);
+  background-color: rgba(236, 237, 239, 0.8);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 
   & a {
     text-align: center;
@@ -93,8 +156,6 @@ nav {
 
     &:hover {
       background-color: rgba(200, 200, 200, 0.4);
-      /* background-color: var(--secondary); */
-      /* color: var(--primary); */
     }
 
     &:active {
@@ -109,34 +170,84 @@ nav {
   }
 }
 
-@media (max-width: 800px) {
+/* Burger Icon */
+.burger {
+  display: none;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 0.6rem;
+  border-radius: 50%;
+  z-index: 1001;
+
+  & i {
+    font-size: 2rem;
+    color: var(--text);
+  }
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  &.active {
+    rotate: 90deg;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 850px) {
   nav {
-    flex-direction: column;
-    align-items: center;
-    gap: 0rem;
-    border-radius: 20px;
+    justify-content: space-between;
+    gap: 0;
+    /* padding: 1rem; */
+    border-radius: 25px;
+    box-shadow: none;
+    background: none;
+    backdrop-filter: none;
+  }
+
+  .burger {
+    display: block;
   }
 
   .links {
     flex-direction: column;
     width: 100%;
     padding: 0.5rem;
+    margin-top: 0.5rem;
     border-radius: 15px;
-    background-color: rgba(236, 237, 239, 0.5);
+    /* background-color: rgba(236, 237, 239, 0.5); */
+    max-height: 0;
+    /* overflow: hidden; */
+    /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
 
-    & a {
-      /* text-align: start; */
-      width: 100%;
-      border-radius: 10px;
-    }
+  .links.mobile-expanded {
+    max-height: 500px;
+    padding: 0.5rem;
+  }
+
+  .links a {
+    width: 100%;
+    border-radius: 10px;
   }
 
   .logo {
-    margin-bottom: 1rem;
-
-    & .span {
-      display: block !important;
-    }
+    margin-bottom: 0.5rem;
   }
+}
+
+/* Animation */
+/* .slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: all 0.3s ease-in-out;
+} */
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  opacity: 0;
+  transform: scaleY(0.8);
 }
 </style>

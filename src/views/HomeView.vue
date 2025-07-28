@@ -10,8 +10,8 @@ export default {
 </script>
 
 <template>
-  <div class="bg-shape fade-shape">
-    <img src="@/assets/img/home/shape_02.png" alt="Hero Image" />
+  <div class="bg-shape fade-in-shape">
+    <img src="@/assets/img/home/shape_03.png" alt="Hero Image" />
   </div>
 
   <div class="hero appear">
@@ -27,11 +27,11 @@ export default {
         <i class="ri-arrow-right-circle-line"></i>
       </router-link>
     </div>
-  </div>
 
-  <div class="scoll-down appear">
-    <p>Découvrir</p>
-    <i class="ri-arrow-down-double-fill bounce"></i>
+    <div class="scoll-down appear">
+      <p>Découvrir</p>
+      <i class="ri-arrow-down-double-fill bounce"></i>
+    </div>
   </div>
 </template>
 
@@ -41,22 +41,17 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  align-self: center;
-  justify-self: center;
-  /* top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
   z-index: -1;
-  /* width: auto; */
+  width: 100%;
   height: 100vh;
   animation-delay: 0.5s;
-  scale: 0.8;
-  /* outline: 1px solid red; */
 
   & img {
-    width: 100%;
-    /* height: 100%; */
-    object-fit: fill;
+    max-width: 100%;
+    max-height: 150%;
+    object-fit: cover;
+    /* overflow: hidden; */
+    /* animation: hue-shift 10s infinite linear; */
   }
 }
 
@@ -65,7 +60,7 @@ export default {
 
   h1 {
     font-family: "Arial Black", sans-serif;
-    font-size: clamp(2rem, 5vw, 5rem);
+    font-size: clamp(2rem, 10vw, 5rem);
     font-weight: bold;
     color: var(--text);
     text-align: center;
@@ -85,20 +80,23 @@ export default {
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 5vw, 2rem);
     font-weight: 600;
     opacity: 0.8;
     line-height: 1.5;
     color: var(--text);
     text-align: center;
     margin-bottom: 2rem;
+    width: 95%;
     max-width: 500px;
+    text-wrap: wrap;
   }
 
   .links {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 2rem;
 
     a {
@@ -114,7 +112,7 @@ export default {
       cursor: pointer;
 
       & p {
-        font-size: 1.2rem;
+        font-size: clamp(1rem, 2vw, 1.2rem);
         font-weight: 600;
         margin: 0;
         color: var(--background);
@@ -122,7 +120,7 @@ export default {
       }
 
       i {
-        font-size: 1.5rem;
+        font-size: clamp(1.5rem, 2vw, 1.5rem);
         font-weight: 600;
         color: var(--background);
         text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -132,6 +130,20 @@ export default {
         transform: scale(1.05);
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
       }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .links {
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: center;
+
+    & a {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
     }
   }
 }

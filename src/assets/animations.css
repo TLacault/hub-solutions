@@ -1,48 +1,57 @@
 .appear {
-    opacity: 0;
-    animation: appear 1s ease-in-out forwards;
+  opacity: 0;
+  animation: appear 1s ease-in-out forwards;
 }
 
 @keyframes appear {
-    from {
-      opacity: 0;
-      scale: 0.9;
-      filter: blur(10px);
-    }
-    to {
-      opacity: 1;
-      scale: 1;
-      filter: blur(0);
-    }
-}
-
-
-.fade-shape {
+  from {
     opacity: 0;
-    animation: fade-shape 1s ease-in-out forwards;
+    scale: 0.9;
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+    filter: blur(0);
+  }
 }
 
-@keyframes fade-shape {
-    from {
-      opacity: 0;
-      filter: blur(10px);
-    }
-    to {
-      opacity: 0.3;
-      filter: blur(0);
-    }
+.fade-in-shape {
+  opacity: 0;
+  animation: fade-in-shape 1s ease-in-out forwards;
 }
 
+@keyframes fade-in-shape {
+  from {
+    opacity: 0;
+    filter: blur(10px);
+  }
+  to {
+    opacity: 0.5;
+    filter: blur(0);
+  }
+}
 
 .bounce {
-    animation: bounce 2s ease-in-out infinite;
+  animation: bounce 2s ease-in-out infinite;
 }
 
 @keyframes bounce {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-15px);
-    }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes hue-shift {
+  40%,
+  60% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(180deg);
+  }
 }

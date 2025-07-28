@@ -96,15 +96,15 @@ export default {
       </div>
       <div class="link-group informations">
         <h2>Informations</h2>
-        <router-link to="/mentions-legales">
+        <router-link to="/plan">
           <i class="ri-map-2-fill"></i>
           <p>Plan du site</p>
         </router-link>
-        <router-link to="/mentions-legales">
+        <router-link to="/glossaire">
           <i class="ri-book-marked-fill"></i>
           <p>Glossaire</p>
         </router-link>
-        <router-link to="/mentions-legales">
+        <router-link to="/legal">
           <i class="ri-scales-3-fill"></i>
           <p>Mentions légales</p>
         </router-link>
@@ -157,6 +157,7 @@ footer {
     text-decoration: none;
     color: var(--text);
     display: flex;
+    text-wrap: wrap;
     align-items: center;
     gap: 0.5rem;
     padding: 0.5rem;
@@ -174,6 +175,17 @@ footer {
     p {
       font-size: 0.875rem;
       line-height: 1.2;
+    }
+  }
+}
+
+@media (max-width: 570px) {
+  .link-group {
+    width: 100%;
+    max-width: 95%;
+
+    & h2 {
+      text-align: center;
     }
   }
 }
