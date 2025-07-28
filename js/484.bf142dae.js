@@ -1,2 +1,2 @@
 "use strict";(self["webpackChunkhub"]=self["webpackChunkhub"]||[]).push([[484],{2484:function(n,u,r){r.r(u),r.d(u,{default:function(){return l}});var e=r(6768);const s={class:"hero"};function t(n,u){return(0,e.uX)(),(0,e.CE)("div",s,u[0]||(u[0]=[(0,e.Lk)("h1",null,"Glossaire",-1)]))}var c=r(1241);const a={},h=(0,c.A)(a,[["render",t]]);var l=h}}]);
-//# sourceMappingURL=484.99e4c079.js.map
+//# sourceMappingURL=484.bf142dae.js.map
