@@ -32,8 +32,8 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  max-width: 1200px;
+  width: 95%;
+  max-width: 1500px;
 }
 
 .hero {
@@ -41,6 +41,6 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 100dvh;
 }
 </style>

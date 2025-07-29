@@ -174,14 +174,14 @@ nav {
 .burger {
   display: none;
   cursor: pointer;
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
-  padding: 0.6rem;
+  padding: 0.5rem;
   border-radius: 50%;
   z-index: 1001;
 
   & i {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: var(--text);
   }
 
@@ -200,10 +200,10 @@ nav {
     justify-content: space-between;
     gap: 0;
     /* padding: 1rem; */
-    border-radius: 25px;
+    border-radius: 0px;
     box-shadow: none;
     background: none;
-    backdrop-filter: none;
+    /* backdrop-filter: none; */
   }
 
   .burger {

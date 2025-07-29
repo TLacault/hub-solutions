@@ -185,7 +185,7 @@ footer {
     max-width: 95%;
 
     & h2 {
-      text-align: center;
+      text-align: left;
     }
   }
 }
