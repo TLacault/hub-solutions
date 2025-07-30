@@ -1,4 +1,4 @@
-.appear {
+.anim_appear {
   opacity: 0;
   animation: appear 1s ease-in-out forwards;
 }
@@ -16,7 +16,7 @@
   }
 }
 
-.fade-in-shape {
+.anim_appear-shape {
   opacity: 0;
   animation: fade-in-shape 1s ease-in-out forwards;
 }
@@ -32,7 +32,7 @@
   }
 }
 
-.bounce {
+.anim_bounce {
   animation: bounce 2s ease-in-out infinite;
 }
 

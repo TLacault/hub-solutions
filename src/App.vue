@@ -18,29 +18,31 @@ export default {
 </template>
 
 <style>
-#app {
-  font-family: "Inter", sans-serif;
-  color: var(--text);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Layout */
+
+* {
+  /* outline: 1px solid grey; */
 }
 
-/* Layout */
+section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
 
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 95%;
+  width: 90%;
   max-width: 1500px;
 }
 
-.hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+#hero {
   height: 100dvh;
 }
 </style>

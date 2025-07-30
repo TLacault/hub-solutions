@@ -35,7 +35,7 @@ export default {
   mounted() {
     this.checkWindowWidth();
     window.addEventListener("resize", this.checkWindowWidth);
-    window.addEventListener("scroll", this.handleScroll);
+    // window.addEventListener("scroll", this.handleScroll);
   },
   beforeUnmount() {
     window.removeEventListener("resize", this.checkWindowWidth);
@@ -45,11 +45,11 @@ export default {
 </script>
 
 <template>
-  <nav class="appear" :class="{ hidden: hideNav && !isMobile }">
+  <nav class="anim_appear" :class="{ hidden: hideNav && !isMobile }">
     <!-- Logo -->
     <router-link to="/" class="logo">
-      <img src="@/assets/img/logo.png" alt="Logo" />
-      <span>Hub Solutions</span>
+      <img src="@/assets/img/logo_blue.png" alt="Logo" />
+      <span class="gradient_text">HUB Solutions</span>
     </router-link>
 
     <!-- Burger Icon -->
@@ -91,11 +91,8 @@ nav {
   position: fixed;
   top: 0rem;
   width: 100%;
-  /* max-width: 1500px; */
-  /* border-radius: 100px; */
   padding: 10px 1rem 10px;
   background-color: rgba(255, 255, 255, 0.2);
-  /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   z-index: 1000;
@@ -125,6 +122,15 @@ nav {
   & span {
     font-family: "Arial Black", sans-serif;
     font-size: clamp(1.2rem, 2vw, 1.5rem);
+    font-weight: 600;
+    /* font-weight: bold; */
+  }
+}
+
+@media (max-width: 600px) {
+  .logo span {
+    font-weight: 900;
+    font-family: "Arial", sans-serif;
   }
 }
 
@@ -174,8 +180,10 @@ nav {
 .burger {
   display: none;
   cursor: pointer;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   padding: 0.5rem;
   border-radius: 50%;
   z-index: 1001;
@@ -185,12 +193,10 @@ nav {
     color: var(--text);
   }
 
-  &:hover {
-    background: rgba(0, 0, 0, 0.1);
-  }
-
   &.active {
     rotate: 90deg;
+    scale: 1.1;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   }
 }
 

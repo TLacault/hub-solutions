@@ -1,5 +1,5 @@
 <template>
   <section id="hero">
-    <h1>Audits</h1>
+    <h1>Audit Etude de Postes</h1>
   </section>
 </template>

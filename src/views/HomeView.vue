@@ -10,14 +10,16 @@ export default {
 </script>
 
 <template>
-  <div class="bg-shape fade-in-shape">
-    <img src="@/assets/img/home/shape_01.png" alt="Hero Image" />
-  </div>
+  <section id="hero">
+    <div class="shape-01 anim_appear-shape">
+      <img src="@/assets/img/home/shape_01.png" alt="Hero Image" />
+    </div>
 
-  <div class="hero appear">
-    <h1>HUB Solutions</h1>
-    <h2>Formation et conseil en prévention des risques professionnels</h2>
-    <div class="links">
+    <h1 class="anim_appear">HUB Solutions</h1>
+    <h2 class="anim_appear">
+      Formation et conseil en prévention des risques professionnels
+    </h2>
+    <div class="links anim_appear">
       <router-link to="/formations">
         <p>Formations</p>
         <i class="ri-arrow-right-circle-line"></i>
@@ -28,47 +30,85 @@ export default {
       </router-link>
     </div>
 
-    <div class="scoll-down appear">
+    <div class="scroll-down anim_appear">
       <p>Découvrir</p>
       <i class="ri-arrow-down-double-fill bounce"></i>
     </div>
-  </div>
+  </section>
 
-  <section class="about container">
-    <div class="title">
-      <i class="ri-double-quotes-l"></i>
-      <h2>Hub Solutions, votre partenaire prévention</h2>
-      <i class="ri-double-quotes-r"></i>
-    </div>
-    <div class="content">
-      <div class="illustration">
-        <img src="@/assets/img/home/hand_shake.png" alt="Hero Image" />
+  <section id="about">
+    <div class="container">
+      <div class="title">
+        <i class="ri-double-quotes-l"></i>
+        <h2>HUB Solutions, votre partenaire prévention</h2>
+        <i class="ri-double-quotes-r"></i>
       </div>
-      <div class="text">
-        <p>
-          Chez <span>Hub Solutions</span>, nous considérons la
-          <span>diversité</span> comme une source de richesse. Chaque individu
-          est différent et chaque entreprise l'est tout autant.
-        </p>
-        <p>
-          A l'opposé de beaucoup de nos concurrents, nous assurons bien plus
-          qu'une simple prestation. Nous offrons à chacun de nos clients un
-          <span>accompagnement complet et personnalisé</span> dans leur démarche
-          de prévention.
-        </p>
-        <p>
-          C'est pourquoi nous avons à cœur de proposer des audits et des
-          formations calibrées et adaptées aux besoins et aux spécificités de
-          chaque entreprise. Par ailleurs, nous sommes convaincus que
-          <span>la bienveillance, l'écoute et la confiance mutuelle</span> sont
-          de réels moteurs d'apprentissage et de réussite. C'est pour cela que
-          nous avons inscrit ces trois principes au cœur de toutes nos
-          formations.
-        </p>
-        <p>
-          Être <span>le partenaire de nos clients</span>, c'est ce qui fait la
-          richesse de notre métier et la force de <span>Hub Solutions</span>.
-        </p>
+      <div class="content">
+        <div class="illustration">
+          <img src="@/assets/img/home/hand_shake.png" alt="Hero Image" />
+        </div>
+        <div class="text">
+          <p>
+            Chez <span class="gradient_text">HUB Solutions</span>, nous
+            considérons la <span>diversité</span> comme une source de richesse.
+            Chaque individu est différent et chaque entreprise l'est tout
+            autant.
+          </p>
+          <p>
+            A l'opposé de beaucoup de nos concurrents, nous assurons bien plus
+            qu'une simple prestation. Nous offrons à chacun de nos clients un
+            <span>accompagnement complet et personnalisé</span> dans leur
+            démarche de prévention.
+          </p>
+          <p>
+            C'est pourquoi nous avons à cœur de proposer des audits et des
+            formations calibrées et adaptées aux besoins et aux spécificités de
+            chaque entreprise. Par ailleurs, nous sommes convaincus que
+            <span>la bienveillance, l'écoute et la confiance mutuelle</span>
+            sont de réels moteurs d'apprentissage et de réussite. C'est pour
+            cela que nous avons inscrit ces trois principes au cœur de toutes
+            nos formations.
+          </p>
+          <p>
+            Être <span>le partenaire de nos clients</span>, c'est ce qui fait la
+            richesse de notre métier et la force de <span>Hub Solutions</span>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="valeurs">
+    <div class="container">
+      <div class="shape-02">
+        <img src="@/assets/img/home/shape_02.png" alt="Valeur Background" />
+      </div>
+      <div class="title gradient_text">Nos valeurs</div>
+      <div class="cards">
+        <div class="card">
+          <i class="ri-verified-badge-fill"></i>
+          <div class="name">Confiance</div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua !
+          </p>
+        </div>
+        <div class="card">
+          <i class="ri-medal-fill"></i>
+          <div class="name">Professionnalisme</div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua !
+          </p>
+        </div>
+        <div class="card">
+          <i class="ri-shake-hands-fill"></i>
+          <div class="name">Diversité</div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua !
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -76,28 +116,23 @@ export default {
 
 <style scoped>
 /* HERO */
-.bg-shape {
+.shape-01 {
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: -1;
-  width: 100%;
-  height: 100vh;
+  top: 0;
+  height: 100dvh;
   animation-delay: 0.5s;
 
-  & img {
-    max-width: 100%;
-    max-height: 150%;
+  img {
+    height: 100%;
     object-fit: cover;
-    /* overflow: hidden; */
-    /* animation: hue-shift 10s infinite linear; */
   }
 }
 
-.hero {
-  animation-delay: 1s;
-
+#hero {
   h1 {
     font-family: "Arial Black", sans-serif;
     font-size: clamp(2rem, 10vw, 5rem);
@@ -117,19 +152,19 @@ export default {
       var(--logo_2)
     );
     color: transparent;
+    animation-delay: 1s;
   }
 
   h2 {
     font-size: clamp(1.5rem, 5vw, 2rem);
     font-weight: 600;
-    opacity: 0.8;
-    line-height: 1.5;
-    color: var(--text);
+    color: var(--text-700);
     text-align: center;
     margin-bottom: 2rem;
-    width: 95%;
+    width: 90%;
     max-width: 500px;
     text-wrap: wrap;
+    animation-delay: 1.2s;
   }
 
   .links {
@@ -138,8 +173,9 @@ export default {
     justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
+    animation-delay: 1.6s;
 
-    a {
+    & a {
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -147,6 +183,7 @@ export default {
       gap: 0.5rem;
       padding: 1rem 2rem;
       border-radius: 100px;
+      /* width: fit-content; */
       background: linear-gradient(45deg, #0f67ff, #c5dafc 80%);
       color: var(--text);
       cursor: pointer;
@@ -159,7 +196,7 @@ export default {
         text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
       }
 
-      i {
+      & i {
         font-size: clamp(1.5rem, 2vw, 1.5rem);
         font-weight: 600;
         color: var(--background);
@@ -174,7 +211,7 @@ export default {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .links {
     flex-direction: column !important;
     align-items: center;
@@ -188,7 +225,7 @@ export default {
   }
 }
 
-.scoll-down {
+.scroll-down {
   position: absolute;
   bottom: 20px;
   left: 50%;
@@ -202,9 +239,9 @@ export default {
   justify-content: center;
   gap: 1.5rem;
 
-  animation-delay: 2s;
+  animation-delay: 2.4s;
 
-  p {
+  & p {
     font-size: 1rem;
     font-weight: 600;
     color: var(--text);
@@ -212,7 +249,7 @@ export default {
     opacity: 0.8;
   }
 
-  i {
+  & i {
     border-radius: 100px;
     padding: 0.5rem 0;
     animation: bounce 2s infinite;
@@ -224,21 +261,16 @@ export default {
 }
 
 /* ABOUT */
-.about * {
-  /* outline: 1px solid red; */
-}
-
-.about {
-  outline: 1px solid red;
+#about {
   margin-top: 30vh;
 }
 
-.about .title {
+#about .title {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 
   & i {
     font-size: 3rem;
@@ -254,14 +286,13 @@ export default {
   }
 }
 
-.about .content {
+#about .content {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 2rem;
   width: 100%;
-  padding: 2rem;
 
   & .illustration {
     width: 50%;
@@ -300,12 +331,16 @@ export default {
     span {
       font-weight: 700;
       /* color: var(--primary); */
+
+      &:nth-child(1) {
+        font-weight: 800;
+      }
     }
   }
 }
 
 @media (max-width: 1300px) {
-  .about .content {
+  #about .content {
     flex-wrap: wrap;
     /* justify-content: center; */
 
@@ -322,6 +357,89 @@ export default {
     }
     & .text {
       text-align: left;
+    }
+  }
+}
+
+/* VALEURS */
+#valeurs {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  gap: 2rem;
+  margin-top: 50vh;
+  margin-bottom: 30vh;
+
+  & .title {
+    /* font-size: 4rem; */
+    font-size: clamp(3rem, 5vw, 4rem);
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+}
+
+.shape-02 {
+  position: absolute;
+  z-index: -1;
+
+  & img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    opacity: 0.1;
+  }
+}
+
+#valeurs .cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+
+  & .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 350px;
+    max-width: 80vw;
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+    &:hover {
+      transform: translateY(-5px);
+      scale: 1.02;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    i {
+      font-size: 2.5rem;
+      color: var(--primary);
+    }
+
+    .name {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: var(--text);
+      text-align: center;
+    }
+
+    p {
+      font-size: 1rem;
+      color: var(--text-700);
+      line-height: 1.5;
+      opacity: 0.8;
     }
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="hero">
+  <section id="hero">
     <h1>Plan</h1>
-  </div>
+  </section>
 </template>

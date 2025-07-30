@@ -31,15 +31,15 @@ export default {
       </div>
       <div class="link-group formations">
         <h2>Formations</h2>
-        <!-- <router-link to="/formations">
+        <router-link to="/formations">
           <i class="ri-book-open-fill"></i>
           <p>Catalogue de formations</p>
-        </router-link> -->
+        </router-link>
         <router-link to="/formations/sst">
           <i class="ri-book-fill"></i>
           <p>Sauveteur Secouriste du Travail</p>
         </router-link>
-        <router-link to="/formations/prap">
+        <router-link to="/formations/prap-ibc">
           <i class="ri-book-fill"></i>
           <p>Prévention des Risques liés à l'Activité Physique - PRAP</p>
         </router-link>
@@ -51,17 +51,13 @@ export default {
           <i class="ri-book-fill"></i>
           <p>Les bases de la prévention</p>
         </router-link>
-        <router-link to="/formations/bases">
-          <i class="ri-book-fill"></i>
-          <p>Document unique & démarche de prévention</p>
-        </router-link>
       </div>
       <div class="link-group audits">
         <h2>Audits</h2>
-        <!-- <router-link to="/audits">
+        <router-link to="/audits">
           <i class="ri-file-list-3-fill"></i>
           <p>Catalogue d'audits</p>
-        </router-link> -->
+        </router-link>
         <router-link to="/audits/document-unique">
           <i class="ri-file-list-2-fill"></i>
           <p>Evaluation des risques & Rédaction du document unique</p>
