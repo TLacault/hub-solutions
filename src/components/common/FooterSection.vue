@@ -107,7 +107,7 @@ export default {
       </div>
     </div>
     <div class="copyright">
-      <img src="@/assets/img/logo.png" alt="HUB Solution Logo" />
+      <img src="@/assets/img/logo/original.webp" alt="HUB Solution Logo" />
       <h1>HUB Solutions</h1>
       <p>&copy; 2025 Hub Solutions. All rights reserved.</p>
     </div>
@@ -123,6 +123,7 @@ footer {
   width: 100%;
   padding: 2rem 0;
   gap: 2rem;
+  margin-top: 30vh;
 }
 
 .links {

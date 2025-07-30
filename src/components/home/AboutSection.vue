@@ -8,7 +8,7 @@
       </div>
       <div class="content">
         <div class="illustration">
-          <img src="@/assets/img/home/hand_shake.png" alt="Hero Image" />
+          <img src="@/assets/img/home/hand_shake.webp" alt="Hero Image" />
         </div>
         <div class="text">
           <p>

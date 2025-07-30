@@ -1,6 +1,6 @@
 <script>
-import NavigationBar from "@/components/NavigationBar.vue";
-import FooterSection from "@/components/FooterSection.vue";
+import NavigationBar from "@/components/common/NavigationBar.vue";
+import FooterSection from "@/components/common/FooterSection.vue";
 
 export default {
   name: "App",

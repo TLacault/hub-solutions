@@ -2,7 +2,7 @@
   <section id="valeurs">
     <div class="container">
       <div class="shape-02">
-        <img src="@/assets/img/home/shape_02.png" alt="Valeur Background" />
+        <img src="@/assets/img/home/shape_02.webp" alt="Valeur Background" />
       </div>
       <div class="title gradient_text">Nos valeurs</div>
       <div class="cards">
@@ -45,7 +45,6 @@
   min-height: 50vh;
   gap: 2rem;
   margin-top: 50vh;
-  margin-bottom: 30vh;
 
   & .title {
     /* font-size: 4rem; */

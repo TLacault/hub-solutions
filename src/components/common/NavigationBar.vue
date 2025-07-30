@@ -48,7 +48,7 @@ export default {
   <nav class="anim_appear" :class="{ hidden: hideNav && !isMobile }">
     <!-- Logo -->
     <router-link to="/" class="logo">
-      <img src="@/assets/img/logo_blue.png" alt="Logo" />
+      <img src="@/assets/img/logo/original.webp" alt="Logo" />
       <span class="gradient_text">HUB Solutions</span>
     </router-link>
 

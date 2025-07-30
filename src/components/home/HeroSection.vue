@@ -1,7 +1,7 @@
 <template>
   <section id="hero">
     <div class="shape-01 anim_appear-shape">
-      <img src="@/assets/img/home/shape_01.png" alt="Hero Image" />
+      <img src="@/assets/img/home/shape_01.webp" alt="Hero Image" />
     </div>
 
     <h1 class="anim_appear">HUB Solutions</h1>
