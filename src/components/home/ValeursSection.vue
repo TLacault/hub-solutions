@@ -1,10 +1,10 @@
 <template>
   <section id="valeurs">
     <div class="container">
-      <div class="shape-02">
-        <img src="@/assets/img/home/shape_02.webp" alt="Valeur Background" />
+      <div class="bg-shape">
+        <img src="@/assets/img/home/shape_02.webp" alt="Background Image" />
       </div>
-      <div class="title gradient_text">Nos valeurs</div>
+      <div class="title gradient-title">Nos valeurs</div>
       <div class="cards">
         <div class="card">
           <i class="ri-verified-badge-fill"></i>
@@ -45,26 +45,6 @@
   min-height: 50vh;
   gap: 2rem;
   margin-top: 50vh;
-
-  & .title {
-    /* font-size: 4rem; */
-    font-size: clamp(3rem, 5vw, 4rem);
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 3rem;
-  }
-}
-
-.shape-02 {
-  position: absolute;
-  z-index: -1;
-
-  & img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    opacity: 0.1;
-  }
 }
 
 #valeurs .cards {

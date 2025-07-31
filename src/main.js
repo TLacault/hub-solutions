@@ -9,3 +9,4 @@ import "./assets/styles/theme.css";
 import "./assets/styles/reset.css";
 import "./assets/styles/animations.css";
 import "./assets/styles/fonts.css";
+import "./assets/styles/common.css";

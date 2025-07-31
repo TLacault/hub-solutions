@@ -96,11 +96,5 @@
   --radialSecondaryAccent: radial-gradient(#c5dafc, #86f492);
 }
 
-.gradient_text {
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  background-image: linear-gradient(90deg, var(--text), var(--primary));
-}
 /* Theme is available and configurable at :
 https://www.realtimecolors.com/?colors=0e1014-f8f9fb-0f67ff-C5DAFC-86F492&fonts=Inter-Inter */
