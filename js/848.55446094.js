@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkhub"]=self["webpackChunkhub"]||[]).push([[848],{8848:function(n,u,e){e.r(u),e.d(u,{default:function(){return h}});var r=e(6768);const t={id:"hero"};function s(n,u){return(0,r.uX)(),(0,r.CE)("section",t,u[0]||(u[0]=[(0,r.Lk)("h1",null,"Glossaire",-1)]))}var c=e(1241);const o={},a=(0,c.A)(o,[["render",s]]);var h=a}}]);
-//# sourceMappingURL=848.55446094.js.map
