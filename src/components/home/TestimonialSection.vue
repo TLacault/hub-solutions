@@ -187,10 +187,6 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
-* {
-  /* outline: 1px solid red; */
-}
-
 .bg-shape {
   opacity: 0.4;
 }
