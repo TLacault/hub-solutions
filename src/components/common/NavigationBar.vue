@@ -83,7 +83,6 @@ export default {
 
 <style scoped>
 nav {
-  /* outline: 1px solid red; */
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -94,14 +93,12 @@ nav {
   padding: 10px 1rem 10px;
   background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  z-index: 1000;
 
-  &.hidden {
+  /* &.hidden {
     transform: translateY(-100%);
     opacity: 0;
     pointer-events: none;
-  }
+  } */
 }
 
 .logo {
@@ -123,7 +120,20 @@ nav {
     font-family: "Arial Black", sans-serif;
     font-size: clamp(1.2rem, 2vw, 1.5rem);
     font-weight: 600;
-    /* font-weight: bold; */
+
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(
+      90deg,
+      var(--logo_3),
+      var(--logo_5),
+      var(--logo_6),
+      var(--logo_1),
+      var(--logo_2)
+    );
+    color: transparent;
+    animation-delay: 1s;
   }
 }
 
@@ -141,15 +151,16 @@ nav {
 }
 
 .links {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.2rem;
+  gap: 0.5rem;
   border-radius: 100px;
   padding: 0.5rem;
-  background-color: rgba(236, 237, 239, 0.8);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.8);
+  /* backdrop-filter: blur(10px); */
+  /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); */
 
   & a {
     text-align: center;
@@ -180,13 +191,12 @@ nav {
 .burger {
   display: none;
   cursor: pointer;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   padding: 0.5rem;
   border-radius: 50%;
-  z-index: 1001;
 
   & i {
     font-size: 1.8rem;
@@ -205,10 +215,9 @@ nav {
   nav {
     justify-content: space-between;
     gap: 0;
-    /* padding: 1rem; */
     border-radius: 0px;
     box-shadow: none;
-    background: none;
+    /* background: none; */
     /* backdrop-filter: none; */
   }
 
@@ -225,7 +234,6 @@ nav {
     /* background-color: rgba(236, 237, 239, 0.5); */
     max-height: 0;
     /* overflow: hidden; */
-    /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
   }

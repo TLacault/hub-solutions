@@ -203,27 +203,19 @@ onUnmounted(() => {
   max-width: 600px;
   padding: 2rem;
   border-radius: 20px;
-  box-shadow: var(--shadow-md);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2),
+    inset 0px 0px 8px rgba(0, 0, 0, 0.15);
   background: linear-gradient(
-    245deg,
-    var(--background) 50%,
-    var(--secondary) 100%
+    45deg,
+    rgba(15, 103, 255, 0.1),
+    rgba(255, 255, 255, 0.1)
   );
+  backdrop-filter: blur(5px);
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    border-radius: 22px;
-    background: linear-gradient(
-      220deg,
-      var(--primary) 0%,
-      var(--background) 70%
-    );
-    z-index: -1;
+  &:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2),
+      inset 0px 0px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
   }
 }
 
@@ -240,6 +232,7 @@ onUnmounted(() => {
   border-radius: 100px;
   object-fit: cover;
   margin-bottom: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .name-rating {
@@ -279,13 +272,13 @@ onUnmounted(() => {
   opacity: 0.85;
   line-height: 1.5;
   font-style: italic;
-  text-align: justify;
+  text-align: center;
 }
 
 .read-more {
   position: absolute;
-  right: 0.7rem;
-  bottom: 0.7rem;
+  right: 1rem;
+  bottom: 1rem;
   background: var(--secondary);
   padding: 0.5rem;
   border-radius: 100px;

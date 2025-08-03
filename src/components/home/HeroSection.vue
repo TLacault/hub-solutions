@@ -52,6 +52,7 @@
     text-align: center;
     margin-bottom: 1rem;
 
+    font-weight: 900;
     background-clip: text;
     -webkit-background-clip: text;
     background-image: linear-gradient(
